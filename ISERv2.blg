@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ISERv2.aux
 The style file: plain.bst
 Database file #1: david.bib
-You've used 9 entries,
+You've used 10 entries,
             2118 wiz_defined-function locations,
-            555 strings with 5784 characters,
-and the built_in function-call counts, 3703 in all, are:
-= -- 375
-> -- 151
-< -- 5
-+ -- 59
-- -- 50
-* -- 263
-:= -- 572
-add.period$ -- 29
-call.type$ -- 9
-change.case$ -- 52
+            562 strings with 6013 characters,
+and the built_in function-call counts, 4219 in all, are:
+= -- 426
+> -- 169
+< -- 6
++ -- 67
+- -- 56
+* -- 295
+:= -- 643
+add.period$ -- 32
+call.type$ -- 10
+change.case$ -- 58
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 149
-empty$ -- 299
-format.name$ -- 50
-if$ -- 810
+cite$ -- 10
+duplicate$ -- 174
+empty$ -- 343
+format.name$ -- 56
+if$ -- 931
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 9
-newline$ -- 48
-num.names$ -- 18
-pop$ -- 53
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 53
+num.names$ -- 20
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 48
 quote$ -- 0
-skip$ -- 119
+skip$ -- 141
 stack$ -- 0
-substring$ -- 278
-swap$ -- 52
-text.length$ -- 5
+substring$ -- 320
+swap$ -- 65
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 40
 warning$ -- 0
-while$ -- 36
-width$ -- 10
-write$ -- 104
+while$ -- 40
+width$ -- 12
+write$ -- 115

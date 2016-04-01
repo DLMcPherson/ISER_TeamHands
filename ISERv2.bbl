@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{fearing1986simplified}
 Ronald~S Fearing.
@@ -11,6 +11,13 @@ D.~W. Haldane, K.~C. Peterson, F.~L.~Garcia Bermudez, and R.~S. Fearing.
   millirobot.
 \newblock In {\em Robotics and Automation (ICRA), 2013 IEEE International
   Conference on}, pages 3279--3286, May 2013.
+
+\bibitem{SelfFlip}
+C.~C. Kessens, D.~C. Smith, and P.~R. Osteen.
+\newblock A framework for autonomous self-righting of a generic robot on sloped
+  planar surfaces.
+\newblock In {\em Robotics and Automation (ICRA), 2012 IEEE International
+  Conference on}, pages 4724--4729, May 2012.
 
 \bibitem{li2015terradynamically}
 Chen Li, Andrew~O Pullin, Duncan~W Haldane, Han~K Lam, Ronald~S Fearing, and

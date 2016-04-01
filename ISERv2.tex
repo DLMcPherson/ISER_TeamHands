@@ -10,7 +10,8 @@
 
 %\DeclareMathOperator{\Tr}{Tr}
 
-\title{Multi Robots as Delocalized Dexterous Manipulator: a Case Study in Out-of-Plane Rolling via Simple Pushing Robots}
+%\title{Multi Robots as Delocalized Dexterous Manipulator: a Case Study in Out-of-Plane Rolling via Simple Pushing Robots}
+\title{Out of Plane Rolling via Simple Pushing Robot Team}
 
 \author{David L. McPherson \and Ronald S. Fearing}
 
@@ -34,7 +35,7 @@ The object being "manipulated" is the robot's body as its position evolves throu
 
 More complex physical interactions are also being pioneered in the realm of grasping and manipulation.
 The science of grasping kinematics and dynamics were refined for factory pick-and-place robots with high precision, high gain controllers moving steely fingers precisely to stiff locations.
-However, as robots leave the factory, they no longer have the luxurys previously assumed by past developments.
+However, as robots leave the factory, they no longer have the luxuries previously assumed by past developments.
 Robots no longer know the exact initial position of target parts.
 Indeed, the target part may be unstably tumbling about in unknown ways.
 To remedy this misfortune, ingenious engineers are working towards compliant grapsing that naturally includes more forgiveness in the mechanics (see Bicchi et. al \cite{BicchiCompliant}).
@@ -65,7 +66,7 @@ The first robot is the lightweight and highly mobile RoACH robot.
 This robot is modeled after the American Cockroach due to its wide variety of high speed, stable gaits \cite{RoACH}.
 We will be using the RoACH model with the terradynamicaly streamed shell designed by Li et. al \cite{li2015terradynamically}.
 However, this robot is also prone to landing inverted on its back and being incapable of righting.
-Previous work has investigated additional actuators and mechanisms for getting the robot back on its feet.
+Previous work \cite{SelfFlip} has investigated additional actuators and mechanisms for getting the robot back on its feet.
 However, we are interested in keeping the number of actuators low, for the sake of an affordable robot swarm.
 We can achieve the same righting behavior by simply tuning some team member's shape for out-of-plane rolling.
 
@@ -169,7 +170,8 @@ Although the flipping behavior is reliable, at the time of this writing the auth
 
 \clearpage
 \section{Scheduled Experiments}
-Scheduled experiments will quantify the breadth of objects that combining finger shape design and treating robots as a delocalized hand's fingers can successfully handle.
+Our future work will focus on better quantifying and characterizing the limits of this team-righting manipulation.
+
 We will use the system communication architecture illustrated in Fig. \ref{fig:system}.
 This architecture will allow coordinated control of a team of robot fingers to enact trajectories to manipulate a target object.
 
@@ -179,12 +181,13 @@ This architecture will allow coordinated control of a team of robot fingers to e
 \caption{\label{fig:system}Information Flow and Block Diagram of Robot System}
 \end{figure}
 
-We will experiment on the flipping characteristics for more target shapes such as classic polyhedra and semi-cylinders.
-We also wish to extend our manipulation to the analogue of compliant grasps, when the mass of the object and the fingers are in the same order of magnitude.
+Secondly, we wish to adapt the pushing surfaces to apply to our RoACH platforms and thereby have a homogeneous team capable of righting a capsized comrade.
+This extension will push our manipulation to the analogue of compliant grasps, when the mass of the object and the fingers are in the same order of magnitude.
 In this scenario, the fingers are no longer certain to move to the desired position, but instead will be pushed back by the target object compliantly.
-This would allow us to have the finger robots manipulate a fellow robot in their swarm as the target object opening up avenues for complex cooperative maneuvers leveraging this manipulation.
 
-\clearpage
+Finally, we will extend the swarm rolling manipulation to more general shapes besides the useful application examined here (righting a capsized ellipsoidal comrade).
+In particualr we hope to examine the flipping characteristics for target shapes such as convex polyhedra and semi-cylinders.
+
 \section{Main Experimental Insights}
 Robots can be used to perform full DOF manipulations of environmental objects using only passive kinematics through shape design.
 Analysis for designing robot interface shape for contact can leverage rich, general manipulation theory and translate to new domain of locomotive manipulation.
