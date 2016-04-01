@@ -5,6 +5,27 @@ Ronald~S Fearing.
 \newblock Simplified grasping and manipulation with dextrous robot hands.
 \newblock {\em Robotics and Automation, IEEE Journal of}, 2(4):188--195, 1986.
 
+\bibitem{RoACH}
+D.~W. Haldane, K.~C. Peterson, F.~L.~Garcia Bermudez, and R.~S. Fearing.
+\newblock Animal-inspired design and aerodynamic stabilization of a hexapedal
+  millirobot.
+\newblock In {\em Robotics and Automation (ICRA), 2013 IEEE International
+  Conference on}, pages 3279--3286, May 2013.
+
+\bibitem{li2015terradynamically}
+Chen Li, Andrew~O Pullin, Duncan~W Haldane, Han~K Lam, Ronald~S Fearing, and
+  Robert~J Full.
+\newblock Terradynamically streamlined shapes in animals and robots enhance
+  traversability through densely cluttered terrain.
+\newblock {\em Bioinspiration \& biomimetics}, 10(4):046003, 2015.
+
+\bibitem{Lynch01011999}
+Kevin~M. Lynch and Matthew~T. Mason.
+\newblock Dynamic nonprehensile manipulation: Controllability, planning, and
+  experiments.
+\newblock {\em The International Journal of Robotics Research}, 18(1):64--92,
+  1999.
+
 \bibitem{rodriguez2013effector}
 Alex Rodriguez and Matthew~T Mason.
 \newblock Effector form design for 1dof planar actuation.
@@ -23,6 +44,13 @@ Thomas~G Sugar and Vijay Kumar.
 \newblock Control of cooperating mobile manipulators.
 \newblock {\em Robotics and Automation, IEEE Transactions on}, 18(1):94--103,
   2002.
+
+\bibitem{BicchiCompliant}
+G.~Tonietti, R.~Schiavi, and A.~Bicchi.
+\newblock Design and control of a variable stiffness actuator for safe and fast
+  physical human/robot interaction.
+\newblock In {\em Robotics and Automation, 2005. ICRA 2005. Proceedings of the
+  2005 IEEE International Conference on}, pages 526--531, April 2005.
 
 \bibitem{zhang2002gripper}
 Mike~Tao Zhang and Ken Goldberg.

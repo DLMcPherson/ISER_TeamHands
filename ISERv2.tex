@@ -61,14 +61,15 @@ Finally, the capsized robot's shape (half an ellipsoid) is a fair surrogate for 
 \section{Technical Approach}
 \subsection{Robotic Platforms}
 The Biomimetic Milllisystems Lab at Berkeley has been investigating group exploration using a heterogenous team of two types of robots.
-The first robot is the lightweight and highly mobile RoACH robot \cite{RoACH}.
-This robot is modeled after the American Cockroach due to its wide variety of high speed, stable gaits.
+The first robot is the lightweight and highly mobile RoACH robot.
+This robot is modeled after the American Cockroach due to its wide variety of high speed, stable gaits \cite{RoACH}.
+We will be using the RoACH model with the terradynamicaly streamed shell designed by Li et. al \cite{li2015terradynamically}.
 However, this robot is also prone to landing inverted on its back and being incapable of righting.
 Previous work has investigated additional actuators and mechanisms for getting the robot back on its feet.
 However, we are interested in keeping the number of actuators low, for the sake of an affordable robot swarm.
 We can achieve the same righting behavior by simply tuning some team member's shape for out-of-plane rolling.
 
-The second robot The platform is codenamed "Zumy" and is shown in Fig. 1.
+The second robot The platform is codenamed "Zumy" and is shown in Fig. \ref{fig:zumy}.
 A further description of the experimental system can be found at \url{https://wiki.eecs.berkeley.edu/biomimetics/Main/Zumy}.
 The Zumy platform combines a high power ODROID processor with the commercially available Zumo chassis (from Pololu).
 The processor can run Linux, ROS, and computer vision algorithms for experiments in sensor fusion, SLAM, and swarm control.
@@ -93,7 +94,13 @@ We will build on work by Fearing et. al \cite{fearing1986simplified}, and use a 
 This choice for contact surface is well motivated by the cylinder's inherent instability in contact.
 This instability will tend to push any contacted object up and over the cylinder, allowing exciting new modes for manipulation (as we will see shortly).
 
-The cylindrical roller will be affixed to the front of the Zumy robot as shown in Fig. \ref{fig:pimpedZumy}.
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{EquippedZumy.jpg}
+\caption{\label{fig:zumy}Zumy Platform with Designed Plow and Backstop}
+\end{figure}
+
+The cylindrical roller will be affixed to the front of the Zumy robot as shown in Fig. \ref{fig:zumy}.
 As will be described in the next sections analysis, the cylinder requires a frictive backstop to push the target object against.
 This can be either a fixture in the environment or the frictive backside of another Zumy backing into the target object.
 The cylindrical contact surface on the front of the robot, is paired with a backstop contact surface on the back of the robot.
@@ -117,50 +124,48 @@ We also considered two types of hinging surfaces: frictive wall and entrapping h
 \begin{figure}[!tbp]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=0.3\textwidth]{PlowSurfaceTypes.eps}
+    \includegraphics[width=1.0\textwidth]{PlowSurfaceTypes.eps}
     \caption{\label{fig:psurfaces}Pushing Surface Types: (left) plow (right) roller}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=0.3\textwidth]{HingeSurfaceTypes.eps}
+    \includegraphics[width=1.0\textwidth]{HingeSurfaceTypes.eps}
     \caption{\label{fig:surfacesh}Hinge Surface Types: (left) friction plane (right) entrapping hinge}
   \end{minipage}
 \end{figure}
 
-We investigate how these designs can flip a semi-ellipsoidal object as stand-in for general target polyhedra.
-We believe the ellipsoid is a fair indicator of flipping ability since it is a polyhedron taken to the limit with infinite sides.
-Ellipsoids are used emblematically in the grasping literature as well since they are among the most difficult to grasp due their inherent instability.
-
-To gain insight into how these designs would flip, we plot the trajectories that the ellipsoid will roll through as the plow finger and hinge finger approach each other.
+To gain insight into how these designs would flip our inverted robot, we plot the trajectories that the ellipsoid will roll through as the plow finger and hinge finger approach each other.
 We use kinematics to determine the ellipsoid's configuratin dependent on plow position and then calculate the friction and normal forces quasi-statically.
 We highlight the sections of the traces where a frictive surface will act as a perfect hinge using friction force.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{PlowFlipTrace.png}
-\caption{\label{fig:plow}Trace of object roll w.r.t plow distance from hinge}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{RollerFlipTrace.png}
-\caption{\label{fig:roller}Trace of object roll w.r.t roller distance from hinge}
+\begin{figure}[!ht]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.0\textwidth]{PlowFlipTrace.png}
+    \caption{\label{fig:plow}Trace of object roll w.r.t plow distance from hinge}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=1.0\textwidth]{RollerFlipTrace.png}
+    \caption{\label{fig:roller}Trace of object roll w.r.t roller distance from hinge}
+  \end{minipage}
 \end{figure}
 
 \subsection{Experiment}
 We then tested the cylindrical pushing surface paired with an entrapping hinge.
 The frictive backstop wall on the Zumy can be used to rotate target objects up to 90 degrees.
-However, we wish to flip a
-The experiments positively confirmed that this setup can roll the ellipsoid.
-Our robot "fingers" can manipulate objects out of the plane with roll successfully!
-
-See Fig. \ref{fig:photos}
+However, we wish to flip the capsized robot a full 180 degrees requiring a different backstop type.
+In this experiment we will use another RoACH robot equipped with an "entrapping hinge" type backstop as described in the previous section.
+This will catch the lip of the capsized roach which will then turn about the caught point like a hinge.
+This design successfully righted the fallen robot as shown in Fig. \ref{fig:photos}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.3\textwidth]{Photo_Sequence.jpg}
 \caption{\label{fig:photos}Photo Sequence of Experimental Flipping}
 \end{figure}
+
+Although the flipping behavior is reliable, at the time of this writing the author has not decided upon a suitable metric for quantifying the manipulation capability and reliability. See "Scheduled Experiments" section.
 
 \clearpage
 \section{Scheduled Experiments}
