@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{fearing1986simplified}
+Ronald~S Fearing.
+\newblock Simplified grasping and manipulation with dextrous robot hands.
+\newblock {\em Robotics and Automation, IEEE Journal of}, 2(4):188--195, 1986.
+
+\bibitem{rodriguez2013effector}
+Alex Rodriguez and Matthew~T Mason.
+\newblock Effector form design for 1dof planar actuation.
+\newblock In {\em Robotics and Automation (ICRA), 2013 IEEE International
+  Conference on}, pages 349--356. IEEE, 2013.
+
+\bibitem{rus1995moving}
+Daniela Rus, Bruce Donald, and Jim Jennings.
+\newblock Moving furniture with teams of autonomous robots.
+\newblock In {\em Intelligent Robots and Systems 95.'Human Robot Interaction
+  and Cooperative Robots', Proceedings. 1995 IEEE/RSJ International Conference
+  on}, volume~1, pages 235--242. IEEE, 1995.
+
+\bibitem{sugar2002control}
+Thomas~G Sugar and Vijay Kumar.
+\newblock Control of cooperating mobile manipulators.
+\newblock {\em Robotics and Automation, IEEE Transactions on}, 18(1):94--103,
+  2002.
+
+\bibitem{zhang2002gripper}
+Mike~Tao Zhang and Ken Goldberg.
+\newblock Gripper point contacts for part alignment.
+\newblock {\em Robotics and Automation, IEEE Transactions on}, 18(6):902--910,
+  2002.
+
+\end{thebibliography}
