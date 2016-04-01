@@ -82,25 +82,23 @@ Here we extend the rich history of research in manipulation to when the "robot h
 Distances between the individual fingers are not tightly constrained as in a traditional dexterous hand where all fingers are linked to a unifying palm.
 However, our robots have the added constraint of being grounded to move in the plane rather than flex through three dimensions like traditional fingers.
 
-To overcome this shortcoming, we do not design the fingers to rigidly enclose the object (force or form closure) and secure the object in a grasp as in a traditional pick-and-place schema.
-Defaulting to a pick-and-place schema is not available to our robots, since the "hand" cannot freely move everywhere (as is assumed in pick-and-place).
-Instead the robots are constrained to operate in the plane. Stuck to the ground and unable to fly.
-This constraint means in a pick and place schema, the object can be manipulated through as many dimensions as the robot \"hand\" does.
-Here our robots only have three DOF on the plane (x,y,yaw).
+To overcome this shortcoming, we do not design the fingers to rigidly enclose the object (force or form closure).
+That is, we do not secure the object in a grasp as in a traditional pick-and-place schema.
+The pick-and-place schema is infeasible for our robot swarm since we effectively only have a 3DOF "arm" rather than a 6 or 7DOF one. Our "arm" cannot rotate in three-space.
 We will still use the pick-and-place schema for achieving manipulations in these three DOF, but if we want full manipulation (including: roll, pitch, and z) we need something more for our manipulation.
 
 Enter the tumbling manipulation mode -- and the required shape-for-contact design requisite to it.
 By abandoning the notion of a closure-sealed grasp, our robot can leverage carefully controlled slippage through dexterous manipulation to achieve extra DOF.
-We will build on work by \cite{fearing1986simplified}, and use a cylindrical contact surface.
+We will build on work by Fearing et. al \cite{fearing1986simplified}, and use a cylindrical contact surface.
 This choice for contact surface is well motivated by the cylinder's inherent instability in contact.
 This instability will tend to push any contacted object up and over the cylinder, allowing exciting new modes for manipulation (as we will see shortly).
-The cylindrical contact surface on the front of the robot, is paired with a backstop contact surface on the back of the robot.
-Our robots can choose to engage an object with either of its two faces (front plow or backstop).
-The backstop surface can fix the object at a point and form a hinge.
-This hinge can then be leveraged by another robot pushing the object. Teamwork!
 
-\subsection{Previous Work}
-In their seminal paper,
+The cylindrical roller will be affixed to the front of the Zumy robot as shown in Fig. \ref{fig:pimpedZumy}.
+As will be described in the next sections analysis, the cylinder requires a frictive backstop to push the target object against.
+This can be either a fixture in the environment or the frictive backside of another Zumy backing into the target object.
+The cylindrical contact surface on the front of the robot, is paired with a backstop contact surface on the back of the robot.
+
+\subsection{Shape for Contact Literature}
 Rather than add an active flipping arm or mechanism, we will use purely passive kinematics of the pushing robot's shape to manipulate the object.
 Shape designs for reorienting objects have been thoroughly explored in the robot hand literature.
 Rodriguez et al.\cite{rodriguez2013effector} derived the desired shape for an end effector given a target motion.
@@ -110,21 +108,23 @@ This work will similarly investigate how designing just the contact shape can re
 
 \clearpage
 \section{Results}
+\subsection{Simulation}
 Recall that each robot is designed with a pushing surface on the front and a hinging surface on its back.
 The robot can choose to engage an object with either of these surfaces since it moves with unicycle kinematics.
 We considered two types of front pushing surfaces: plow and cylindrical roller (see Fig. \ref{fig:psurfaces}).
 We also considered two types of hinging surfaces: frictive wall and entrapping hinge (see Fig. \ref{fig:surfacesh}).
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{PlowSurfaceTypes.eps}
-\caption{\label{fig:psurfaces}Pushing Surface Types: (left) plow (right) roller}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{HingeSurfaceTypes.eps}
-\caption{\label{fig:surfacesh}Hinge Surface Types: (left) friction plane (right) entrapping hinge}
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{PlowSurfaceTypes.eps}
+    \caption{\label{fig:psurfaces}Pushing Surface Types: (left) plow (right) roller}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=0.3\textwidth]{HingeSurfaceTypes.eps}
+    \caption{\label{fig:surfacesh}Hinge Surface Types: (left) friction plane (right) entrapping hinge}
+  \end{minipage}
 \end{figure}
 
 We investigate how these designs can flip a semi-ellipsoidal object as stand-in for general target polyhedra.
@@ -147,7 +147,10 @@ We highlight the sections of the traces where a frictive surface will act as a p
 \caption{\label{fig:roller}Trace of object roll w.r.t roller distance from hinge}
 \end{figure}
 
+\subsection{Experiment}
 We then tested the cylindrical pushing surface paired with an entrapping hinge.
+The frictive backstop wall on the Zumy can be used to rotate target objects up to 90 degrees.
+However, we wish to flip a
 The experiments positively confirmed that this setup can roll the ellipsoid.
 Our robot "fingers" can manipulate objects out of the plane with roll successfully!
 
