@@ -1,1 +1,10 @@
-\BOOKMARK [0][-]{chapter.1}{Out\040of\040Plane\040Rolling\040via\040Simple\040Pushing\040Robot\040Team}{}% 1
+\BOOKMARK [1][-]{section.1}{Motivation,\040Problem\040Statement,\040Related\040Work}{}% 1
+\BOOKMARK [1][-]{section.2}{Technical\040Approach}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Robotic\040Platforms}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Effector\040Design}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Shape\040for\040Contact\040Literature}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Results}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Simulation}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Experiment}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Scheduled\040Experiments}{}% 9
+\BOOKMARK [1][-]{section.5}{Main\040Experimental\040Insights}{}% 10
